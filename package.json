@@ -1,0 +1,20 @@
+{
+  "name": "responsiveportfolio",
+  "version": "1.0.0",
+  "description": "Responsive John Doe portfolio with Sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "responsive",
+    "portfolio",
+    "developer",
+    "programer"
+  ],
+  "author": "Geekers-Joel237",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
