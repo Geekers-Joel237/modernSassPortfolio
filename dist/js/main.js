@@ -36,3 +36,4 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+

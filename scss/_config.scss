@@ -30,5 +30,16 @@ $background-opacity:0.9;
             opacity: $background-opacity;
 
         }
+
+        .portrait {
+            width: 150px;
+            height: 150px;
+            border: 3px solid $secondary-color;
+            border-radius: 50%;
+            background: url('../img/portrait.jpg') no-repeat ;
+            background-size: cover;
+            background-position: center;
+
+        }
     }    
 }

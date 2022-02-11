@@ -37,3 +37,91 @@
     //Rotate into X with Menu Lines
 }
 
+//Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: $background-opacity;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &_branding,
+    &_nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+
+    &_nav {
+        background: darken($color: $primary-color, $amount: 5);
+        transform: translate3d(0,100%,0);
+        @include easeOut();
+
+        &.show {
+            //Slide in from bottom
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    //Brandind side
+    &_branding {
+        background: $primary-color;
+        transform: translate3d(0,-100%,0);
+        @include easeOut();
+
+        &.show {
+            //slide in from top
+            transform: translate3d(0,0,0);
+        }
+
+        
+    }
+
+    .nav_item {
+        transform: translate3d(600px,0,0);
+        @include easeOut();
+
+        &.show {
+            //Slide in from right
+            transform: translate3d(0,0,0);
+            
+            
+        }
+    }
+
+    .nav_item {
+        display: inline-block;
+        position: relative;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: bold;
+        @include easeOut();
+
+        &:hover a {
+            color: $secondary-color;
+        }
+
+        &.current > a {
+            color: $secondary-color;
+        }
+        
+    }
+}
+
+//Delay each nav item slide by 0.1s
+@for $var from 1 to 4 {
+    .nav_item:nth-child(#{$var}) {
+        transition-delay: $var * .1s;
+    }
+}
