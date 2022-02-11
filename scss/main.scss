@@ -1,5 +1,94 @@
-$primary-color:#333;
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#bloc_page {
+    width: 100vw;
+    min-height: 100vh;
+}
 
 body {
+    @include background();
     background: $primary-color;
+    color: $white;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
 }
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+//headings
+h1,
+h2,
+h3 {
+    font-weight: 400;
+
+    &.lg_heading {
+        font-size: 6rem;
+    }
+
+    .text_secondary {
+        color: $secondary-color;
+    }
+    
+    &.sm_heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1 rem;
+        background: rgba(lighten($primary-color,2),0.5);
+    }
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+main {
+    padding: 4rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
