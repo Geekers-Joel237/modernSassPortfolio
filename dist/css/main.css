@@ -76,6 +76,36 @@
 .nav_item:nth-child(3) {
   transition-delay: 0.3s; }
 
+@media only screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 15vh; } }
+
+@media only screen and (max-width: 768px) {
+  main .lg_heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+    margin-top: 15vh; }
+  ul.menu_nav,
+  div.menu_branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    height: 25vh; }
+    ul.menu_nav.show,
+    div.menu_branding.show {
+      transform: translate3d(0, 0, 0); }
+  .show {
+    transform: translate3d(0, 0, 0); }
+  .menu_nav {
+    height: 75vh !important;
+    transform: translate3d(-100%, 0, 0); }
+  .menu_branding {
+    transform: translate3d(100%, 0, 0); }
+    .menu_branding .portrait {
+      background: url("../img/portrait_small.jpg") cover center;
+      width: 100px;
+      height: 100px; } }
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -125,3 +125,34 @@
         transition-delay: $var * .1s;
     }
 }
+
+//Media Query Mixins
+@mixin mediaSm {
+    @media only screen and (max-width: 500px) {
+        @content; 
+    }
+}
+
+//
+
+@mixin mediaMd {
+    @media only screen and (max-width: 768px) {
+        @content; 
+    }
+}
+
+//
+
+@mixin mediaLg {
+    @media only screen and (min-width:769px) and (max-width: 1170px) {
+        @content; 
+    }
+}
+
+//
+
+@mixin mediaXl {
+    @media only screen and (min-width: 1171px) {
+        @content; 
+    }
+} 
