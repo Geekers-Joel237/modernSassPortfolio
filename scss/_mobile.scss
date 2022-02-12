@@ -74,10 +74,16 @@
         
 
      }
+
+     .item {
+        width: 50% !important;
+     }
+     
     
 }
 
 //Smartphones
 @include mediaLg {
+    
     
 }

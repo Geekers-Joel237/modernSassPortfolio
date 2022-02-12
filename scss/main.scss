@@ -85,7 +85,7 @@ main {
     }
 }
 
-
+//about
 .about_info {
     display: grid;
     gap: 30px;
@@ -165,6 +165,38 @@ main {
     
 }
 
+//work
+.projects {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
 
+    .item {
+        width: 30%;
+        margin: auto;
+        // border: 5px solid red;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            &.ligth {
+                background: $white;
+                color: $primary-color;
+            }
+
+            &.dark {
+                background: $primary-color;
+                color: $white;
+            }
+        }
+        
+    }
+
+
+}
 
 

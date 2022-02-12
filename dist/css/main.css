@@ -113,7 +113,9 @@
       width: 100% !important; }
   .about_info .jobs {
     grid-template-columns: 1fr !important;
-    gap: 2rem; } }
+    gap: 2rem; }
+  .item {
+    width: 50% !important; } }
 
 * {
   box-sizing: border-box;
@@ -253,3 +255,22 @@ main {
   bottom: 0;
   right: 0;
   left: 0; }
+
+.projects {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem; }
+  .projects .item {
+    width: 30%;
+    margin: auto; }
+    .projects .item img {
+      width: 100%; }
+    .projects .item a {
+      display: block; }
+      .projects .item a.ligth {
+        background: #fff;
+        color: #444; }
+      .projects .item a.dark {
+        background: #444;
+        color: #fff; }
