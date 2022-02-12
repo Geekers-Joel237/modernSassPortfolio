@@ -189,7 +189,7 @@ main {
             }
 
             &.dark {
-                background: $primary-color;
+                background: lighten($primary-color,5);
                 color: $white;
             }
         }
@@ -197,6 +197,18 @@ main {
     }
 
 
+}
+
+//reachme
+.contact {
+    border: 3px solid $secondary-color;
+    margin: 2rem;
+    padding: 1rem;
+    transform: scale(1);
+    &:hover {
+        transform: scale(0.8 );
+        @include easeOut();
+    }
 }
 
 

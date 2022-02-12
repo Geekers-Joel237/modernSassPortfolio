@@ -272,5 +272,14 @@ main {
         background: #fff;
         color: #444; }
       .projects .item a.dark {
-        background: #444;
+        background: #515151;
         color: #fff; }
+
+.contact {
+  border: 3px solid #eece1a;
+  margin: 2rem;
+  padding: 1rem;
+  transform: scale(1); }
+  .contact:hover {
+    transform: scale(0.8);
+    transition: all 0.5s ease-out; }
