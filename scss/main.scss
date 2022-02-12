@@ -19,7 +19,7 @@
 body {
     @include background();
     background: $primary-color;
-    color: $white;
+    color: set-text-color(rgb(78, 78, 119));
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
@@ -63,6 +63,7 @@ header {
 
 main {
     padding: 4rem;
+    // min-height: calc(100vh-60px);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -82,15 +83,87 @@ main {
 
         }
     }
-
-
-
 }
 
 
+.about_info {
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    'bioimage bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(1fr);
 
+    .info {
+        display: flex;
+        justify-content: space-around;
 
+        .bio {
+            width: 60%;
+        }
+    }
 
+    .jobs {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+
+    .bio_image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+    }
+    
+    .bio {
+        border: 2px solid red;
+        margin-top: 5%;
+        grid-area: bio;
+        font-size: 1.5rem;
+
+        
+        .text_secondary {
+            color: $secondary-color;
+        }
+    }
+    
+    .job1 {
+        grid-area: job1;
+    }
+    
+    .job2 {
+        grid-area: job2;
+    }
+    
+    .job3 {
+        grid-area: job3;
+    }
+    
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 1rem;
+        border-bottom: $secondary-color 5px solid;
+        margin: auto;
+        margin-bottom: 5%;
+        line-height: 1.8;
+        min-height: 40vh;
+    }
+}
+
+#main_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: darken($primary-color,10);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
 
 
 

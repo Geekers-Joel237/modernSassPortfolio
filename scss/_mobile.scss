@@ -44,12 +44,36 @@
         transform: translate3d(100%,0,0);
 
         .portrait {
-            background: url('../img/portrait_small.jpg') cover center;
+            background: url('../img/portrait_small.jpg') cover center ;
             width: 100px;
             height: 100px;
         }
     }
     
+    .about_info {
+        // grid-template-areas: 
+        // 'bioimage'
+        // 'bio'
+        // 'job1'
+        // 'job2'
+        // 'job3';
+        .info {
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            .bio {
+                width: 100% !important;
+            }
+        }
+
+        .jobs {
+            grid-template-columns: 1fr !important;
+            gap: 2rem;
+        }
+        
+
+     }
     
 }
 
