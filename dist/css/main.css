@@ -222,7 +222,6 @@ main {
     border-radius: 50%;
     border: 3px solid #eece1a; }
   .about_info .bio {
-    border: 2px solid red;
     margin-top: 5%;
     grid-area: bio;
     font-size: 1.5rem; }
